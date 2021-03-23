@@ -12,7 +12,7 @@ nltk.download('punkt')
 from sklearn.metrics.pairwise import cosine_similarity,cosine_distances
 
 ps = nltk.PorterStemmer()
-sw = set(stopwords.words('english'))
+# sw = set(stopwords.words('english'))
 
 from tika import parser
 import string
