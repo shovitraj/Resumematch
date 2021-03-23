@@ -30,8 +30,8 @@ def preprocess(text):
     # remove all tokens that are not alphabetic
     wordsisalpha = [word for word in tokens if word.isalpha()]
     #stemmed = [ps.stem(word) for word in wordsisalpha]
-    final_token = [word for word in wordsisalpha if word not in sw]
-    word_count = Counter(final_token)
+    #final_token = [word for word in wordsisalpha if word not in sw]
+    word_count = Counter(wordisalpha)
     return word_count
 
 def cosSimilarity(x, y):
