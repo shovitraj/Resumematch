@@ -14,5 +14,5 @@ resume = preprocess(resume)
 
 matchPercentage = np.round((Similarity(job, resume)*100),2)
 
-st.write('Your Resume matched', matchPercentage, '% with the job description')
+st.write("Your Resume matched", matchPercentage, '% with the job description')
 

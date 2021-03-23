@@ -2,7 +2,7 @@
 import nltk
 import os
 import string
-from nltk.corpus import stopwords
+# from nltk.corpus import stopwords
 from nltk.tokenize import word_tokenize
 from collections import Counter
 import numpy as np
