@@ -3,6 +3,14 @@ from nlp import Similarity
 import streamlit as st 
 import numpy as np
 
+hide_streamlit_style = """
+            <style>
+            #MainMenu {visibility: hidden;}
+            footer {visibility: hidden;}
+            </style>
+            """
+st.markdown(hide_streamlit_style, unsafe_allow_html=True)
+
 st.title('Resume Match')
 
 job = st.text_area('Paste your Job Description')
@@ -14,5 +22,9 @@ resume = preprocess(resume)
 
 matchPercentage = np.round((Similarity(job, resume)*100),2)
 
-st.write("Your Resume matched", matchPercentage, '% with the job description')
+if len(job) != 0 and len(resume) != 0:
+    st.write("Your Resume matched", matchPercentage, '% with the job description')
+
+    
+
 
