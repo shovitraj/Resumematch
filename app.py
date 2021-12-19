@@ -29,14 +29,13 @@ resume = preprocess(resume)
 
 matchPercentage = np.round((Similarity(job, resume)*100),2)
 
-if len(job) >= 50 and len(resume) >= 50:
-    if len(job) >=50 and len(resume) >=50:
-        st.sidebar.markdown(
-        f'<div style="color: green; font-size: largest"> Your resume matched <h1> {matchPercentage}% </h1> with the job description. </h1></div>',
-        unsafe_allow_html=True)
+if len(job) > len(JOB_DEF) and len(resume) > len(RES_DEF):
+    st.sidebar.markdown(
+    f'<div style="color: green; font-size: largest"> Your resume matched <h1> {matchPercentage}% </h1> with the job description. </h1></div>',
+    unsafe_allow_html=True)
 #         st.write("Your Resume matched", matchPercentage, '% with the job description')
-        if matchPercentage >= 80:
-            st.balloons()
+    if matchPercentage >= 80:
+        st.balloons()
 
     
 
